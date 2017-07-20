@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
 	void PutABomb()
 	{
-		if (Input.GetKeyUp(KeyCode.B))
+		if (Input.GetKeyUp(KeyCode.R))
 			Instantiate(Bomb, transform.position + transform.forward - transform.up, Quaternion.identity);
 	}
 }

@@ -9,7 +9,7 @@ public class Shooting : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.R))
+		if (Input.GetKeyDown(KeyCode.Mouse0))
 		{
 			Rigidbody temp = Instantiate(Bullet, transform.position, transform.rotation);
 			temp.AddForce(transform.up * Force);

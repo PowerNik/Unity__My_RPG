@@ -11,7 +11,7 @@ public class ExplosionSpell : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if (Input.GetKeyDown(KeyCode.F))
+		if (Input.GetKeyDown(KeyCode.Mouse1))
 			MakeAnExplosion();
 	}
 
