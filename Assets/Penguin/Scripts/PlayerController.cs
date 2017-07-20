@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 	void FixedUpdate()
 	{
 		Moving();
+		Jumping();
 	}
 
 	void Moving()
@@ -42,5 +43,11 @@ public class PlayerController : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.E))
 			rb.transform.Rotate(Vector3.up * SpeedRotation);
+	}
+
+	void Jumping()
+	{
+		if (Input.GetKey(KeyCode.Space))
+			rb.AddForce(rb.transform.up * JumpForce);
 	}
 }
