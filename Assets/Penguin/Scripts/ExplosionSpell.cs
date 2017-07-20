@@ -6,7 +6,7 @@ public class ExplosionSpell : MonoBehaviour
 {
 	public float power = 15f;
 	public float radius = 10f;
-	public float upForce = 1f;
+	public float upForce = 2f;
 
 
 	void FixedUpdate()
