@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ExplosionSpell : MonoBehaviour
 {
-	public float power = 10f;
+	public float power = 15f;
 	public float radius = 10f;
-	public float upForce = 10f;
+	public float upForce = 1f;
 
 
 	void FixedUpdate()
