@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-
 	public Rigidbody Bullet;
 	public float Force = 15f;
 

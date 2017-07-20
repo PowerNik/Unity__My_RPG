@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+	public GameObject Bomb;
 	public float Speed = 10f;
 	public float JumpForce = 100f;
 
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 	{
 		Moving();
 		Jumping();
+		PutABomb();
 	}
 
 	void Moving()
@@ -49,5 +50,11 @@ public class PlayerController : MonoBehaviour
 	{
 		if (Input.GetKey(KeyCode.Space))
 			rb.AddForce(rb.transform.up * JumpForce);
+	}
+
+	void PutABomb()
+	{
+		if (Input.GetKeyUp(KeyCode.B))
+			Instantiate(Bomb, transform.position + transform.forward - transform.up, Quaternion.identity);
 	}
 }
