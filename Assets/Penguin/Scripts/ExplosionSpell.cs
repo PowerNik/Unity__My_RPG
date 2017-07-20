@@ -5,8 +5,8 @@ using UnityEngine;
 public class ExplosionSpell : MonoBehaviour
 {
 	public float power = 10f;
-	public float radius = 5f;
-	public float upForce = 1f;
+	public float radius = 10f;
+	public float upForce = 10f;
 
 
 	void FixedUpdate()
@@ -22,6 +22,9 @@ public class ExplosionSpell : MonoBehaviour
 
 		foreach(Collider col in colliders)
 		{
+			if (col.tag == "Player")
+				continue;
+
 			Rigidbody rb = col.GetComponent<Rigidbody>();
 			if (rb != null)
 				rb.AddExplosionForce(power, explosionPosition, radius, upForce, ForceMode.Impulse);

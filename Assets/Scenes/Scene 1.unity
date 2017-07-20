@@ -592,8 +592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 10
-  radius: 5
-  upForce: 1
+  radius: 10
+  upForce: 10
 --- !u!4 &1168782724 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4467479806022422, guid: 5d7c1369f384b3746b4af7ccefb76319,
@@ -781,6 +781,11 @@ Prefab:
         type: 2}
       propertyPath: Force
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 54946209203300354, guid: 5d7c1369f384b3746b4af7ccefb76319,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65685353098554218, guid: 5d7c1369f384b3746b4af7ccefb76319, type: 2}
