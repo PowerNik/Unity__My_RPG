@@ -40,10 +40,10 @@ public class PlayerController : MonoBehaviour
 
 
 		if (Input.GetKey(KeyCode.Q))
-			rb.transform.Rotate(Vector3.down * SpeedRotation);
+			transform.Rotate(Vector3.down * SpeedRotation);
 
 		if (Input.GetKey(KeyCode.E))
-			rb.transform.Rotate(Vector3.up * SpeedRotation);
+			transform.Rotate(Vector3.up * SpeedRotation);
 	}
 
 	void Jumping()
@@ -55,6 +55,10 @@ public class PlayerController : MonoBehaviour
 	void PutABomb()
 	{
 		if (Input.GetKeyUp(KeyCode.R))
-			Instantiate(Bomb, new Vector3(transform.position.x, 0, transform.position.z + 2f), Quaternion.identity);
+		{
+			Vector3 bombPosition = transform.position + 2 * (transform.localRotation * Vector3.forward);
+			bombPosition.y = 0;
+			Instantiate(Bomb, bombPosition, Quaternion.identity);
+		}
 	}
 }
