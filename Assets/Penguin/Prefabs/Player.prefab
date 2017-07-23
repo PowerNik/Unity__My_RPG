@@ -346,7 +346,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f54a45fe010e7fd49b192ebd1c250cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Bomb: {fileID: 0}
   Speed: 40
+  JumpForce: 50
 --- !u!136 &136969050293022804
 CapsuleCollider:
   m_ObjectHideFlags: 1
