@@ -7,8 +7,9 @@ public class PlayerController : MonoBehaviour
 {
 	public GameObject Bomb;
 	public float Speed = 10f;
-	public float JumpForce = 100f;
+	public float JumpForce = 50f;
 
+	private float maxVelocityXZ = 10f;
 	private float SpeedRotation = 5f;
 	private Rigidbody rb;
 
@@ -26,18 +27,21 @@ public class PlayerController : MonoBehaviour
 
 	void Moving()
 	{
-		if (Input.GetKey(KeyCode.W))
-			rb.AddForce(rb.transform.forward * Speed);
+		float velocityXZ = Mathf.Sqrt(rb.velocity.x * rb.velocity.x + rb.velocity.z * rb.velocity.z);
+		if (velocityXZ < maxVelocityXZ)
+		{
+			if (Input.GetKey(KeyCode.W))
+				rb.AddForce(rb.transform.forward * Speed);
 
-		if (Input.GetKey(KeyCode.S))
-			rb.AddForce(-rb.transform.forward * Speed);
+			if (Input.GetKey(KeyCode.S))
+				rb.AddForce(-rb.transform.forward * Speed);
 
-		if (Input.GetKey(KeyCode.D))
-			rb.AddForce(rb.transform.right * Speed);
+			if (Input.GetKey(KeyCode.D))
+				rb.AddForce(rb.transform.right * Speed);
 
-		if (Input.GetKey(KeyCode.A))
-			rb.AddForce(-rb.transform.right * Speed);
-
+			if (Input.GetKey(KeyCode.A))
+				rb.AddForce(-rb.transform.right * Speed);
+		}
 
 		if (Input.GetKey(KeyCode.Q))
 			transform.Rotate(Vector3.down * SpeedRotation);

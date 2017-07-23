@@ -739,7 +739,7 @@ Prefab:
     - target: {fileID: 114889516565532114, guid: 5d7c1369f384b3746b4af7ccefb76319,
         type: 2}
       propertyPath: Speed
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4467479806022422, guid: 5d7c1369f384b3746b4af7ccefb76319, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -748,12 +748,12 @@ Prefab:
     - target: {fileID: 114889516565532114, guid: 5d7c1369f384b3746b4af7ccefb76319,
         type: 2}
       propertyPath: JumpForce
-      value: 55
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 54946209203300354, guid: 5d7c1369f384b3746b4af7ccefb76319,
         type: 2}
       propertyPath: m_Drag
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 114751268371438942, guid: 5d7c1369f384b3746b4af7ccefb76319,
         type: 2}
@@ -763,7 +763,7 @@ Prefab:
     - target: {fileID: 54946209203300354, guid: 5d7c1369f384b3746b4af7ccefb76319,
         type: 2}
       propertyPath: m_AngularDrag
-      value: 1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114889516565532114, guid: 5d7c1369f384b3746b4af7ccefb76319,
         type: 2}
