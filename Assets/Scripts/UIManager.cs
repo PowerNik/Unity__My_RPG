@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour {
 
 	public void NewGame()
 	{
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene("Main");
 	}
 
 	public void Exit()
