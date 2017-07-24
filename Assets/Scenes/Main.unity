@@ -922,6 +922,17 @@ MonoBehaviour:
   power: 15
   radius: 10
   upForce: 2
+--- !u!114 &1168782719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1168782717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ccfb49e8ba83942bd0f50e138290a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1168782724 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4467479806022422, guid: 5d7c1369f384b3746b4af7ccefb76319,
