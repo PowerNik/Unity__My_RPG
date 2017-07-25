@@ -571,7 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 15
   radius: 10
-  upForce: 2
+  upForce: 3
 --- !u!4 &1168782724 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4467479806022422, guid: 5d7c1369f384b3746b4af7ccefb76319,
