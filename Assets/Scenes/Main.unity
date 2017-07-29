@@ -1648,8 +1648,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bomb: {fileID: 1519980750301652, guid: 4e1934a6f40f6164796d2029b9248c75, type: 2}
-  Speed: 50
-  JumpForce: 500
+  Speed: 0.75
+  JumpForce: 300
 --- !u!54 &1168782721
 Rigidbody:
   m_ObjectHideFlags: 0

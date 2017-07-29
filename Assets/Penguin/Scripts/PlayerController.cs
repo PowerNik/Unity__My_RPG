@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 	public GameObject Bomb;
-	public float Speed = 10f;
-	public float JumpForce = 500f;
+	public float Speed = 0.75f;
+	public float JumpForce = 300f;
 
 	private float maxVelocityXZ = 10f;
 	private float SpeedRotation = 5f;
@@ -20,9 +20,9 @@ public class PlayerController : MonoBehaviour
 
 	public void Moving(Vector3 direction)
 	{
-		float velocityXZ = Mathf.Sqrt(rb.velocity.x * rb.velocity.x + rb.velocity.z * rb.velocity.z);
-		if (velocityXZ < maxVelocityXZ)
-			rb.AddForce(direction * Speed);
+		Vector2 velocityXZ = new Vector2(rb.velocity.x + direction.x * Speed, rb.velocity.z + direction.z * Speed);
+		if (velocityXZ.magnitude < maxVelocityXZ)
+			rb.velocity += direction * Speed;
 	}
 
 	public void Rotating(Vector3 axis)
