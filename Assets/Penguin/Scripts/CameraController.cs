@@ -5,47 +5,52 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-	public Transform targetPosition;
+	public Transform targetTransform;
 
-	float scrollSpeed = 1f;
-	float sensX = 3f;
-	float sensY = 3f;
+	float scrollSpeed = 5;
+	float sensX = 3;
+	float sensY = 3;
 
-	const float MIN_CAMERA_DISTANCE = 3f;
-	const float MAX_CAMERA_DISTANCE = 10f;
-	const float MIN_ANGLE_Y = -10;
+	float distance = 7;
+	const float MIN_CAMERA_DISTANCE = 3;
+	const float MAX_CAMERA_DISTANCE = 15;
+
+	float angleX = 0;
+	float angleY = 30;
+	const float MIN_ANGLE_Y = -5;
 	const float MAX_ANGLE_Y = 90;
 
-	void LateUpdate()
+	void Update()
 	{
 		MoveCamera();
 		ScrollZoom();
 	}
 
+	void LateUpdate()
+	{
+		FollowTheTarget();
+	}
+
 	void MoveCamera()
 	{
-		float newAngleY = -Input.GetAxis("Mouse Y") * sensY + transform.rotation.eulerAngles.x;
-		if (newAngleY > 270)
-			newAngleY -= 360;
+		angleX += Input.GetAxis("Mouse X") * sensX;
 
-		if(MIN_ANGLE_Y <= newAngleY && newAngleY <= MAX_ANGLE_Y)
-			transform.RotateAround(targetPosition.transform.position, transform.right,
-				-Input.GetAxis("Mouse Y") * sensY);
-
-		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) ||
-		Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-			targetPosition.rotation = targetPosition.rotation *
-				Quaternion.Euler(0, Input.GetAxis("Mouse X") * sensX, 0);
-		else
-			transform.RotateAround(targetPosition.transform.position, Vector3.up,
-										Input.GetAxis("Mouse X") * sensX);
+		angleY -= Input.GetAxis("Mouse Y") * sensY;
+		angleY = Mathf.Clamp(angleY, MIN_ANGLE_Y, MAX_ANGLE_Y);
 	}
 
 	void ScrollZoom()
 	{
-		Vector3 newPos = transform.localPosition * (1 - Input.GetAxis("Mouse ScrollWheel") * scrollSpeed);
+		distance -= Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
+		distance = Mathf.Clamp(distance, MIN_CAMERA_DISTANCE, MAX_CAMERA_DISTANCE);
+	}
 
-		if (MIN_CAMERA_DISTANCE < newPos.magnitude && newPos.magnitude < MAX_CAMERA_DISTANCE)
-			transform.localPosition = newPos;
+	void FollowTheTarget()
+	{
+		Vector3 offset = new Vector3(0, 0, -distance);
+		Quaternion rotation = Quaternion.Euler(angleY, angleX, 0);
+
+		transform.position = targetTransform.position + rotation * offset;
+		transform.LookAt(targetTransform.position);
 	}
 }
