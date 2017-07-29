@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
 	public GameObject Bomb;
 	public float Speed = 10f;
-	public float JumpForce = 50f;
+	public float JumpForce = 500f;
 
 	private float maxVelocityXZ = 10f;
 	private float SpeedRotation = 5f;
@@ -18,51 +18,27 @@ public class PlayerController : MonoBehaviour
 		rb = GetComponent<Rigidbody>();
 	}
 
-	void FixedUpdate()
-	{
-		Moving();
-		Jumping();
-		PutABomb();
-	}
-
-	void Moving()
+	public void Moving(Vector3 direction)
 	{
 		float velocityXZ = Mathf.Sqrt(rb.velocity.x * rb.velocity.x + rb.velocity.z * rb.velocity.z);
 		if (velocityXZ < maxVelocityXZ)
-		{
-			if (Input.GetKey(KeyCode.W))
-				rb.AddForce(rb.transform.forward * Speed);
-
-			if (Input.GetKey(KeyCode.S))
-				rb.AddForce(-rb.transform.forward * Speed);
-
-			if (Input.GetKey(KeyCode.D))
-				rb.AddForce(rb.transform.right * Speed);
-
-			if (Input.GetKey(KeyCode.A))
-				rb.AddForce(-rb.transform.right * Speed);
-		}
-
-		if (Input.GetKey(KeyCode.Q))
-			transform.Rotate(Vector3.down * SpeedRotation);
-
-		if (Input.GetKey(KeyCode.E))
-			transform.Rotate(Vector3.up * SpeedRotation);
+			rb.AddForce(direction * Speed);
 	}
 
-	void Jumping()
+	public void Rotating(Vector3 axis)
 	{
-		if (Input.GetKey(KeyCode.Space))
-			rb.AddForce(rb.transform.up * JumpForce);
+		transform.Rotate(axis * SpeedRotation);
 	}
 
-	void PutABomb()
+	public void Jumping()
 	{
-		if (Input.GetKeyUp(KeyCode.R))
-		{
-			Vector3 bombPosition = transform.position + 2 * (transform.localRotation * Vector3.forward);
-			bombPosition.y = 0;
-			Instantiate(Bomb, bombPosition, Quaternion.identity);
-		}
+		rb.AddForce(rb.transform.up * JumpForce);
+	}
+
+	public void PutABomb()
+	{
+		Vector3 bombPosition = transform.position + 2 * (transform.localRotation * Vector3.forward);
+		bombPosition.y = 0;
+		Instantiate(Bomb, bombPosition, Quaternion.identity);
 	}
 }
