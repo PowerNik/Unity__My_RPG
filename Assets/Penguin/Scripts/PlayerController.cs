@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
 	public GameObject Bomb;
 	public float Speed = 0.75f;
-	public float JumpForce = 300f;
+	public float JumpForce = 5;
 
 	private float maxVelocityXZ = 10f;
 	private float SpeedRotation = 5f;
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
 	public void Jumping()
 	{
-		rb.AddForce(rb.transform.up * JumpForce);
+		rb.AddForce(rb.transform.up * JumpForce, ForceMode.Impulse);
 	}
 
 	public void PutABomb()
