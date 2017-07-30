@@ -5,23 +5,38 @@ using UnityEngine;
 public class PlayerInputManager : MonoBehaviour
 {
 	[SerializeField]
-	private PlayerController playerController;
+	PlayerController playerController;
 
-	private KeyCode TurnRightKey = KeyCode.E;
-	private KeyCode TurnLeftKey = KeyCode.Q;
-	private KeyCode JumpKey = KeyCode.Space;
-	private KeyCode PutABombKey = KeyCode.R;
+	KeyCode TurnRightKey = KeyCode.E;
+	KeyCode TurnLeftKey = KeyCode.Q;
+	KeyCode JumpKey = KeyCode.Space;
+	KeyCode PutABombKey = KeyCode.R;
 
-	void Update()
+	[SerializeField]
+	GameObject InventoryPanel;
+	KeyCode BackpackKey = KeyCode.I;
+	bool isBackpackShown = false;
+
+	private void Start()
+	{
+		InventoryPanel.SetActive(isBackpackShown);
+	}
+
+	private void Update()
 	{
 		PutABomb();
 		JumpPlayer();
 	}
 
-	void FixedUpdate()
+	private void FixedUpdate()
 	{
 		MovePlayer();
 		TurnPlayer();
+	}
+
+	private void LateUpdate()
+	{
+		ShowBackpack();
 	}
 
 	void MovePlayer()
@@ -61,5 +76,14 @@ public class PlayerInputManager : MonoBehaviour
 	{
 		if (Input.GetKeyDown(PutABombKey))
 			playerController.PutABomb();
+	}
+
+	void ShowBackpack()
+	{
+		if (Input.GetKeyDown(BackpackKey))
+		{
+			isBackpackShown = !isBackpackShown;
+			InventoryPanel.SetActive(isBackpackShown);
+		}
 	}
 }
