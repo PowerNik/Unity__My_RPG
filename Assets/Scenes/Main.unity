@@ -628,7 +628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraPos: {fileID: 1851903091}
   SpawnPos: {fileID: 438400476}
-  packet: {fileID: 1636553138506480, guid: 8b8f81341e48d554dbf10473796bdf43, type: 2}
+  packet: {fileID: 1002756736896598, guid: a8ea6bd308ce0254c83282fd703181a3, type: 2}
 --- !u!4 &278931192 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4725058285124616, guid: 4fa14674c9839734482c85ba79453be5,
@@ -841,7 +841,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4467479806022422, guid: 5d7c1369f384b3746b4af7ccefb76319, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114794819517309608, guid: 5d7c1369f384b3746b4af7ccefb76319,
         type: 2}
@@ -2148,7 +2148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!114 &1851903092
 MonoBehaviour:
