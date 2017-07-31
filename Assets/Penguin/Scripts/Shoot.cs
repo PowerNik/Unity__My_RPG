@@ -13,12 +13,11 @@ public class Shoot : MonoBehaviour
 	void ShootMe()
 	{
 		Vector3 startPos = SpawnPos.position;
-		GameObject T;
 
 		Physics.Raycast(CameraPos.position, CameraPos.forward, out HIT);
 		Vector3 direction = (HIT.point - startPos).normalized;
 
-		T = Instantiate(packet, startPos, Quaternion.Euler(direction));
+		GameObject T = Instantiate(packet, startPos, this.transform.rotation);
 		T.GetComponent<AbstractMover>().Move(startPos, direction);
 	}
 

@@ -602,38 +602,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114700241229054486, guid: 4fa14674c9839734482c85ba79453be5,
+    - target: {fileID: 114246819183820504, guid: 4fa14674c9839734482c85ba79453be5,
         type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: CameraPos
+      value: 
+      objectReference: {fileID: 1851903091}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fa14674c9839734482c85ba79453be5, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &278931190 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1434991978597502, guid: 4fa14674c9839734482c85ba79453be5,
-    type: 2}
-  m_PrefabInternal: {fileID: 278931189}
---- !u!114 &278931191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 278931190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe378c7e1f9db664288a9f65ff2852bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CameraPos: {fileID: 1851903091}
-  SpawnPos: {fileID: 438400476}
-  packet: {fileID: 1002756736896598, guid: a8ea6bd308ce0254c83282fd703181a3, type: 2}
---- !u!4 &278931192 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4725058285124616, guid: 4fa14674c9839734482c85ba79453be5,
-    type: 2}
-  m_PrefabInternal: {fileID: 278931189}
 --- !u!1 &335236439
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,34 +839,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d7c1369f384b3746b4af7ccefb76319, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &438400475
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 438400476}
-  m_Layer: 0
-  m_Name: Spawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &438400476
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 438400475}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 278931192}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &602083620
 GameObject:
   m_ObjectHideFlags: 0
