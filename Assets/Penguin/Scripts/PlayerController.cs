@@ -9,9 +9,11 @@ public class PlayerController : MonoBehaviour
 	public float Speed = 0.75f;
 	public float JumpForce = 5;
 
-	private float maxVelocityXZ = 10f;
-	private float SpeedRotation = 5f;
-	private Rigidbody rb;
+	[SerializeField]
+
+	float maxVelocityXZ = 10f;
+	float SpeedRotation = 3f;
+	Rigidbody rb;
 
 	void Start()
 	{
@@ -25,9 +27,9 @@ public class PlayerController : MonoBehaviour
 			rb.velocity += direction * Speed;
 	}
 
-	public void Rotating(Vector3 axis)
+	public void RotateX(float rotating)
 	{
-		transform.Rotate(axis * SpeedRotation);
+		transform.Rotate(Vector3.up * rotating * SpeedRotation);
 	}
 
 	public void Jumping()

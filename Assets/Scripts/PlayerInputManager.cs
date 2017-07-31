@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,11 +7,12 @@ public class PlayerInputManager : MonoBehaviour
 {
 	[SerializeField]
 	PlayerController playerController;
-
-	KeyCode TurnRightKey = KeyCode.E;
-	KeyCode TurnLeftKey = KeyCode.Q;
 	KeyCode JumpKey = KeyCode.Space;
 	KeyCode PutABombKey = KeyCode.R;
+
+	[SerializeField]
+	CameraController cameraController;
+	KeyCode RotateCamera = KeyCode.Mouse2;
 
 	[SerializeField]
 	GameObject InventoryPanel;
@@ -20,6 +22,7 @@ public class PlayerInputManager : MonoBehaviour
 	private void Start()
 	{
 		InventoryPanel.SetActive(isBackpackShown);
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	private void Update()
@@ -37,6 +40,17 @@ public class PlayerInputManager : MonoBehaviour
 	private void LateUpdate()
 	{
 		ShowBackpack();
+
+		RotateCameraAround();
+	}
+
+	private void RotateCameraAround()
+	{
+		if (Input.GetKeyDown(RotateCamera))
+			cameraController.RotateAround(true);
+
+		if (Input.GetKeyUp(RotateCamera))
+			cameraController.RotateAround(false);
 	}
 
 	void MovePlayer()
@@ -59,11 +73,8 @@ public class PlayerInputManager : MonoBehaviour
 
 	void TurnPlayer()
 	{
-		if (Input.GetKey(TurnRightKey))
-			playerController.Rotating(Vector3.up);
-
-		if (Input.GetKey(TurnLeftKey))
-			playerController.Rotating(Vector3.down);
+		if (Input.GetKey(RotateCamera) == false)
+			playerController.RotateX(Input.GetAxis("Mouse X"));
 	}
 
 	void JumpPlayer()
