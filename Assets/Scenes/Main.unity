@@ -607,6 +607,12 @@ Prefab:
       propertyPath: CameraPos
       value: 
       objectReference: {fileID: 1851903091}
+    - target: {fileID: 114246819183820504, guid: 4fa14674c9839734482c85ba79453be5,
+        type: 2}
+      propertyPath: packet
+      value: 
+      objectReference: {fileID: 1912204764065892, guid: 5d63298307fa5e94787672146f1dd831,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fa14674c9839734482c85ba79453be5, type: 2}
   m_IsPrefabParent: 0
@@ -797,7 +803,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4467479806022422, guid: 5d7c1369f384b3746b4af7ccefb76319, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 150
+      value: 150.86
       objectReference: {fileID: 0}
     - target: {fileID: 4467479806022422, guid: 5d7c1369f384b3746b4af7ccefb76319, type: 2}
       propertyPath: m_LocalRotation.x
