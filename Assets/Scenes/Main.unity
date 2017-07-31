@@ -602,6 +602,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114700241229054486, guid: 4fa14674c9839734482c85ba79453be5,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fa14674c9839734482c85ba79453be5, type: 2}
   m_IsPrefabParent: 0
@@ -621,9 +626,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe378c7e1f9db664288a9f65ff2852bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraPOS: {fileID: 1851903091}
-  WeaphonePOS: {fileID: 438400476}
-  bullet: {fileID: 54612849957276156, guid: 5aadc7754419aed47b77487038f40c78, type: 2}
+  CameraPos: {fileID: 1851903091}
+  SpawnPos: {fileID: 438400476}
+  packet: {fileID: 1636553138506480, guid: 8b8f81341e48d554dbf10473796bdf43, type: 2}
 --- !u!4 &278931192 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4725058285124616, guid: 4fa14674c9839734482c85ba79453be5,
@@ -745,7 +750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &391387152
 RectTransform:
   m_ObjectHideFlags: 0
@@ -843,6 +848,18 @@ Prefab:
       propertyPath: hpBar
       value: 
       objectReference: {fileID: 1010111640}
+    - target: {fileID: 4848426848985618, guid: 5d7c1369f384b3746b4af7ccefb76319, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852931408535716, guid: 5d7c1369f384b3746b4af7ccefb76319, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636030693273288, guid: 5d7c1369f384b3746b4af7ccefb76319, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d7c1369f384b3746b4af7ccefb76319, type: 2}
   m_IsPrefabParent: 0
@@ -1108,7 +1125,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 10}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &765052302
 MonoBehaviour:
@@ -1122,15 +1139,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 950cbc95b6f50e44b803488fb4cb0ab4, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1312,6 +1329,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &884222810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 884222811}
+  m_Layer: 0
+  m_Name: CameraPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &884222811
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 884222810}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1168782724}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894570335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1626,7 @@ GameObject:
   - component: {fileID: 1158387227}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1787,6 +1832,22 @@ Prefab:
       propertyPath: m_Name
       value: SnowMan
       objectReference: {fileID: 0}
+    - target: {fileID: 1466150330138802, guid: b4791ff77c22b904aab4821ee637f0bc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679834948263778, guid: b4791ff77c22b904aab4821ee637f0bc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102398839382478, guid: b4791ff77c22b904aab4821ee637f0bc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790996030238012, guid: b4791ff77c22b904aab4821ee637f0bc, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4791ff77c22b904aab4821ee637f0bc, type: 2}
   m_IsPrefabParent: 0
@@ -1804,7 +1865,7 @@ GameObject:
   - component: {fileID: 1503472043}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1832,7 +1893,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1984,6 +2045,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1168782720}
+  cameraController: {fileID: 1851903092}
+  InventoryPanel: {fileID: 391387151}
 --- !u!4 &1829826551
 Transform:
   m_ObjectHideFlags: 0
@@ -2080,8 +2143,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1851903086}
-  m_LocalRotation: {x: 0.17902872, y: 0.0029498748, z: -0.0005367888, w: 0.9838393}
-  m_LocalPosition: {x: 154.98296, y: 4.056491, z: 145.211}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 155, y: 5, z: 145}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2098,7 +2161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f42d0d7f862195b40bb2d80fbee26021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 1168782724}
+  LookAt: {fileID: 1168782724}
+  pivot: {fileID: 884222811}
 --- !u!1 &1895498415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2141,7 +2205,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
