@@ -14,7 +14,10 @@ namespace Packets
 			RaycastHit hit;
 
 			if (Physics.Raycast(startPos, direction, out hit))
-				transform.position = hit.transform.position;
+			{
+				gameObject.transform.position = hit.point;
+				gameObject.transform.position -= gameObject.transform.forward * 0.1f;
+			}
 		}
 	}
 }

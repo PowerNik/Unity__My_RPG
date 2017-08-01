@@ -15,7 +15,10 @@ public class Shoot : MonoBehaviour
 		Vector3 startPos = SpawnPos.position;
 
 		Physics.Raycast(CameraPos.position, CameraPos.forward, out HIT);
+
 		Vector3 direction = (HIT.point - startPos).normalized;
+		if (HIT.collider == null)
+			direction = CameraPos.forward;
 
 		GameObject T = Instantiate(packet, startPos, this.transform.rotation);
 		T.GetComponent<AbstractMover>().Move(startPos, direction);
