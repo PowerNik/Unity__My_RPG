@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Packets
+namespace Bullets
 {
-	public class Packet : MonoBehaviour
+	public class Bullet : MonoBehaviour
 	{
 		[SerializeField]
-		AbstractBullet bullet;
+		AbstractPacket packet;
 
 		[SerializeField]
 		AbstractMover mover;
@@ -18,21 +18,21 @@ namespace Packets
 		{
 			rb = GetComponent<Rigidbody>();
 
-			if(bullet && rb)
+			if(packet && rb)
 			{
-				rb.mass = bullet.Mass;
+				rb.mass = packet.Mass;
 			}
 		}
 
-		public void CreatePacket(AbstractBullet bullet, AbstractMover mover)
+		public void CreateBullet(AbstractPacket packet, AbstractMover mover)
 		{
-			this.bullet = bullet;
+			this.packet = packet;
 			this.mover = mover;
 		}
 
 		public void Move(Vector3 startPos, Vector3 aimPos)
 		{
-			rb.mass = bullet.Mass;
+			rb.mass = packet.Mass;
 			mover.Move(startPos, aimPos);
 		}
 	}

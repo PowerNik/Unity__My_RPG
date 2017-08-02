@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Packets
+namespace Bullets
 {
-	public class InstantaneousBullet : AbstractBullet
+	public class InstantaneousPacket : AbstractPacket
 	{
 		public Transform bulletHolePrefab;
 

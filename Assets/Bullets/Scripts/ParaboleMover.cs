@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Packets
+namespace Bullets
 {
 	public class ParaboleMover : AbstractMover
 	{
 		public override void Move(Vector3 startPos, Vector3 direction, Vector3 aimPos)
 		{
-			bullet = GetComponent<AbstractBullet>();
+			packet = GetComponent<AbstractPacket>();
 			rb = GetComponent<Rigidbody>();
 
-			rb.AddForce(direction.normalized * bullet.Speed, ForceMode.Impulse);
+			rb.AddForce(direction.normalized * packet.Speed, ForceMode.Impulse);
 		}
 	}
 }

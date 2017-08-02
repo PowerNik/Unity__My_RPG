@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Packets
+namespace Bullets
 {
-	public abstract class AbstractBullet : MonoBehaviour
+	public abstract class AbstractPacket : MonoBehaviour
 	{
 		public virtual float Damage { get { return 100; } }
 

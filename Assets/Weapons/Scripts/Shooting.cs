@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Packets;
+using Bullets;
 
 public class Shooting : MonoBehaviour
 {

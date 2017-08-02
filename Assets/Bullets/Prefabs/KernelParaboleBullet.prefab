@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114923895641338560}
   - component: {fileID: 114918357025359942}
   m_Layer: 0
-  m_Name: KernelParabolePacket
+  m_Name: KernelParaboleBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

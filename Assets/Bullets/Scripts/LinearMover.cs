@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Packets
+namespace Bullets
 {
 	public class LinearMover : AbstractMover
 	{
 		public override void Move(Vector3 startPos, Vector3 direction, Vector3 aimPos)
 		{
-			bullet = GetComponent<AbstractBullet>();
+			packet = GetComponent<AbstractPacket>();
 			rb = gameObject.GetComponent<Rigidbody>();
 
-			rb.mass = bullet.Mass;
+			rb.mass = packet.Mass;
 			rb.useGravity = false;
 
-			rb.AddForce(direction.normalized * bullet.Speed, ForceMode.VelocityChange);
+			rb.AddForce(direction.normalized * packet.Speed, ForceMode.VelocityChange);
 		}
 	}
 }

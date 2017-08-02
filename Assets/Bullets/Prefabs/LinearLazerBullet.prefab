@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114414435753363468}
   - component: {fileID: 114954792530173808}
   m_Layer: 0
-  m_Name: LinearLazerPacket
+  m_Name: LinearLazerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

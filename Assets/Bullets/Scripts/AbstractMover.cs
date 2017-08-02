@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Packets
+namespace Bullets
 {
 	public abstract class AbstractMover : MonoBehaviour
 	{
-		protected AbstractBullet bullet;
+		protected AbstractPacket packet;
 		protected Rigidbody rb;
 
 		public abstract void Move(Vector3 startPos, Vector3 direction, Vector3 aimPos = new Vector3());

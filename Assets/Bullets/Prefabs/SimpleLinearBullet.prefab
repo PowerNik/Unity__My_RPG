@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114461106219968960}
   - component: {fileID: 114410705008645270}
   m_Layer: 0
-  m_Name: SimpleLinearPacket
+  m_Name: SimpleLinearBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Packets
+namespace Bullets
 {
-	public class KernelBullet : AbstractBullet
+	public class LazerPacket : AbstractPacket
 	{
 		Collider other;
 
-		public override float Damage { get { return 20; } }
-		public override float Mass { get { return 5; } }
-		public override float Speed { get { return 100; } }
+		public override float Damage { get { return 10; } }
+		public override float Mass { get { return 0.1f; } }
+		public override float Speed { get { return 50; } }
 
 		private void OnTriggerEnter(Collider _other)
 		{

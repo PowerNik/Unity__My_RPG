@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114105863070675956}
   - component: {fileID: 114394484615443988}
   m_Layer: 0
-  m_Name: InstantaneousRayCastPacket
+  m_Name: InstantaneousRayCastBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

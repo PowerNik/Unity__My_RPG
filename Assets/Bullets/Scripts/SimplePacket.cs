@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Packets
+namespace Bullets
 {
-	public class SimpleBullet : AbstractBullet
+	public class SimplePacket : AbstractPacket
 	{
 		Collider other;
 

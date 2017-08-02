@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Packets
+namespace Bullets
 {
 	public class HomingMover : AbstractMover
 	{
@@ -11,7 +11,7 @@ namespace Packets
 
 		public override void Move(Vector3 startPos, Vector3 direction, Vector3 aim)
 		{
-			bullet = GetComponent<AbstractBullet>();
+			packet = GetComponent<AbstractPacket>();
 			rb = GetComponent<Rigidbody>();
 
 			aimPos = aim;
@@ -22,7 +22,7 @@ namespace Packets
 		{
 			if (isHoming)
 			{
-				float dash = Time.deltaTime * bullet.Speed;
+				float dash = Time.deltaTime * packet.Speed;
 				transform.position = Vector3.MoveTowards(transform.position, aimPos, dash);
 			}
 		}
