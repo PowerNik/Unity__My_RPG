@@ -10,8 +10,10 @@ namespace Packets
 
 		public virtual float Speed { get { return 10; } }
 
-		public virtual float Mass { get { return 1; } }	
+		public virtual float Mass { get { return 1; } }
 
 		public abstract void DoAttack();
+
+		public virtual void SetParams(RaycastHit hit, Vector3 direction) { }
 	}
 }

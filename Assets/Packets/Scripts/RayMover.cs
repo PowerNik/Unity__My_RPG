@@ -15,8 +15,8 @@ namespace Packets
 
 			if (Physics.Raycast(startPos, direction, out hit))
 			{
-				gameObject.transform.position = hit.point;
-				gameObject.transform.position -= gameObject.transform.forward * 0.1f;
+				bullet.SetParams(hit, direction);
+				bullet.DoAttack();
 			}
 		}
 	}
