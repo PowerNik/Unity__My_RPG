@@ -12,23 +12,53 @@ MonoBehaviour:
   m_Name: Weapon Settings
   m_EditorClassIdentifier: 
   Weapons:
-  - Type: 0
-    icon: {fileID: 0}
-    particle: 0
+  - weaponName: Minigun
+    type: 10
     prefab: {fileID: 0}
-    bullet: {fileID: 0}
-  - Type: 0
     icon: {fileID: 0}
-    particle: 0
+    bulletType: 0
+    isAutomatic: 1
+    isCollimator: 0
+    Capacity: 1000
+    coolDown: 0.01
+    dispersionAngle: 10
+  - weaponName: Laser Gun
+    type: 11
     prefab: {fileID: 0}
-    bullet: {fileID: 0}
-  - Type: 0
     icon: {fileID: 0}
-    particle: 0
+    bulletType: 10
+    isAutomatic: 1
+    isCollimator: 0
+    Capacity: 500
+    coolDown: 0.1
+    dispersionAngle: 10
+  - weaponName: Rocket Launcher
+    type: 12
     prefab: {fileID: 0}
-    bullet: {fileID: 0}
-  - Type: 0
     icon: {fileID: 0}
-    particle: 0
+    bulletType: 10
+    isAutomatic: 0
+    isCollimator: 1
+    Capacity: 100
+    coolDown: 2
+    dispersionAngle: 5
+  - weaponName: My Gun
+    type: 20
     prefab: {fileID: 0}
-    bullet: {fileID: 0}
+    icon: {fileID: 0}
+    bulletType: 20
+    isAutomatic: 1
+    isCollimator: 0
+    Capacity: 100
+    coolDown: 1
+    dispersionAngle: 45
+  - weaponName: Cannon
+    type: 30
+    prefab: {fileID: 0}
+    icon: {fileID: 0}
+    bulletType: 30
+    isAutomatic: 0
+    isCollimator: 0
+    Capacity: 50
+    coolDown: 5
+    dispersionAngle: 5
