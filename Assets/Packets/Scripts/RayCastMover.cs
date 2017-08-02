@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Packets
 {
-	public class RayMover : AbstractMover
+	public class RayCastMover : AbstractMover
 	{
 		public override void Move(Vector3 startPos, Vector3 direction, Vector3 aimPos)
 		{

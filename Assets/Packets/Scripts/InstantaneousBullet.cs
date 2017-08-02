@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Packets
 {
-	public class MetalHitBullet : AbstractBullet
+	public class InstantaneousBullet : AbstractBullet
 	{
 		public Transform bulletHolePrefab;
 
