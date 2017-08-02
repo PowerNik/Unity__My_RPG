@@ -62,7 +62,9 @@ public class CameraController : MonoBehaviour
 	void MoveCamera()
 	{
 		if (isRotateAround)
+		{
 			angleX += Input.GetAxis("Mouse X") * sensX;
+		}
 
 		angleY -= Input.GetAxis("Mouse Y") * sensY;
 		angleY = Mathf.Clamp(angleY, MIN_ANGLE_Y, MAX_ANGLE_Y);

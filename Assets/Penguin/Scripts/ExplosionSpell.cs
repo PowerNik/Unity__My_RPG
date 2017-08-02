@@ -12,9 +12,14 @@ public class ExplosionSpell : MonoBehaviour
 	void FixedUpdate()
 	{
 		if (Input.GetKeyDown(KeyCode.Mouse1))
+		{
 			MakeAnExplosion();
+		}
+
 		if (Input.GetKeyDown(KeyCode.Mouse2))
+		{
 			MakeAnAttraction();
+		}
 	}
 
 	void MakeAnExplosion()
@@ -25,11 +30,15 @@ public class ExplosionSpell : MonoBehaviour
 		foreach (Collider col in colliders)
 		{
 			if (col.tag == "Player")
+			{
 				continue;
+			}
 
 			Rigidbody rb = col.GetComponent<Rigidbody>();
 			if (rb != null)
+			{
 				rb.AddExplosionForce(power, explosionPosition, radius, upForce, ForceMode.Impulse);
+			}
 		}
 	}
 
@@ -41,11 +50,15 @@ public class ExplosionSpell : MonoBehaviour
 		foreach (Collider col in colliders)
 		{
 			if (col.tag == "Player")
+			{
 				continue;
+			}
 
 			Rigidbody rb = col.GetComponent<Rigidbody>();
 			if (rb != null)
+			{
 				rb.AddExplosionForce(-power, explosionPosition, radius, -upForce, ForceMode.Impulse);
+			}
 		}
 	}
 }

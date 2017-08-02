@@ -17,12 +17,17 @@ namespace Packets
 		private void Start()
 		{
 			rb = GetComponent<Rigidbody>();
+
+			if(bullet && rb)
+			{
+				rb.mass = bullet.Mass;
+			}
 		}
 
-		public void CreatePacket(AbstractBullet _bullet, AbstractMover _mover)
+		public void CreatePacket(AbstractBullet bullet, AbstractMover mover)
 		{
-			bullet = _bullet;
-			mover = _mover;
+			this.bullet = bullet;
+			this.mover = mover;
 		}
 
 		public void Move(Vector3 startPos, Vector3 aimPos)

@@ -12,7 +12,9 @@ public class ExplosionBomb : MonoBehaviour
 	void FixedUpdate()
 	{
 		if (Input.GetKey(KeyCode.F))
+		{
 			Invoke("MakeAnExplosion", 0.3f);
+		}
 	}
 
 	void MakeAnExplosion()

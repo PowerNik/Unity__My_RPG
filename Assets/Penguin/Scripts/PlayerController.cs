@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
 	public float Speed = 0.75f;
 	public float JumpForce = 5;
 
-	[SerializeField]
-
 	float maxVelocityXZ = 10f;
 	float SpeedRotation = 3f;
 	Rigidbody rb;
@@ -24,7 +22,9 @@ public class PlayerController : MonoBehaviour
 	{
 		Vector2 velocityXZ = new Vector2(rb.velocity.x + direction.x * Speed, rb.velocity.z + direction.z * Speed);
 		if (velocityXZ.magnitude < maxVelocityXZ)
+		{
 			rb.velocity += direction * Speed;
+		}
 	}
 
 	public void RotateX(float rotating)

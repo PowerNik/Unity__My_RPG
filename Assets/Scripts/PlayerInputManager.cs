@@ -47,10 +47,14 @@ public class PlayerInputManager : MonoBehaviour
 	private void RotateCameraAround()
 	{
 		if (Input.GetKeyDown(RotateCamera))
+		{
 			cameraController.RotateAround(true);
+		}
 
 		if (Input.GetKeyUp(RotateCamera))
+		{
 			cameraController.RotateAround(false);
+		}
 	}
 
 	void MovePlayer()
@@ -74,19 +78,25 @@ public class PlayerInputManager : MonoBehaviour
 	void TurnPlayer()
 	{
 		if (Input.GetKey(RotateCamera) == false)
+		{
 			playerController.RotateX(Input.GetAxis("Mouse X"));
+		}
 	}
 
 	void JumpPlayer()
 	{
 		if (Input.GetKeyDown(JumpKey))
+		{
 			playerController.Jumping();
+		}
 	}
 
 	void PutABomb()
 	{
 		if (Input.GetKeyDown(PutABombKey))
+		{
 			playerController.PutABomb();
+		}
 	}
 
 	void ShowBackpack()

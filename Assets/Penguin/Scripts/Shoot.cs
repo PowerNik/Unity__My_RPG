@@ -18,7 +18,9 @@ public class Shoot : MonoBehaviour
 
 		Vector3 direction = (HIT.point - startPos).normalized;
 		if (HIT.collider == null)
+		{
 			direction = CameraPos.forward;
+		}
 
 		GameObject T = Instantiate(packet, startPos, this.transform.rotation);
 		T.GetComponent<AbstractMover>().Move(startPos, direction);
@@ -27,6 +29,8 @@ public class Shoot : MonoBehaviour
 	private void Update()
 	{
 		if (Input.GetMouseButtonUp(0))
+		{
 			ShootMe();
+		}
 	}
 }
