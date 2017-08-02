@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Bullets
 {
-	public class SimplePacket : AbstractPacket
+	public class ShotPacket : AbstractPacket
 	{
 		Collider other;
 
