@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Packets;
 
-public class Shoot : MonoBehaviour
+public class Shooting : MonoBehaviour
 {
 	public Transform CameraPos;
 	public Transform SpawnPos;
 	RaycastHit HIT;
 	public GameObject packet;
 
-	void ShootMe()
+	void Shoot()
 	{
 		Vector3 startPos = SpawnPos.position;
-
 		Physics.Raycast(CameraPos.position, CameraPos.forward, out HIT);
 
 		Vector3 direction = (HIT.point - startPos).normalized;
@@ -22,15 +21,15 @@ public class Shoot : MonoBehaviour
 			direction = CameraPos.forward;
 		}
 
-		GameObject T = Instantiate(packet, startPos, this.transform.rotation);
-		T.GetComponent<AbstractMover>().Move(startPos, direction);
+		GameObject packetGO = Instantiate(packet, startPos, this.transform.rotation);
+		packetGO.GetComponent<AbstractMover>().Move(startPos, direction);
 	}
 
 	private void Update()
 	{
 		if (Input.GetMouseButtonUp(0))
 		{
-			ShootMe();
+			Shoot();
 		}
 	}
 }
