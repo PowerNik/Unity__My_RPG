@@ -10,9 +10,9 @@ public class BulletScriptableObject : ScriptableObject
 [System.Serializable]
 public class Bullet
 {
-	public BulletType type;
-	public Texture icon;
-	public int particle;
-	public GameObject prefab;
-	public GameObject bullet;
+	public string bulletName;
+	public BulletType bulletType;
+
+	public MoverType moverType = MoverType.LinearMover;
+	public PacketType packetType = PacketType.LaserPacket;
 }

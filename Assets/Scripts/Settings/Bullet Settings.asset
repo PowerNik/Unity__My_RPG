@@ -11,4 +11,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b4ba837a0b67d046a4a9eb2955e64e6, type: 3}
   m_Name: Bullet Settings
   m_EditorClassIdentifier: 
-  Bullets: []
+  Bullets:
+  - bulletName: 
+    bulletType: 0
+    moverType: 0
+    packetType: 0
+  - bulletName: 
+    bulletType: 10
+    moverType: 1
+    packetType: 10
+  - bulletName: 
+    bulletType: 20
+    moverType: 30
+    packetType: 20
+  - bulletName: 
+    bulletType: 30
+    moverType: 10
+    packetType: 30
