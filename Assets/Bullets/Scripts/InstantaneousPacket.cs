@@ -17,15 +17,10 @@ namespace Bullets
 
 		public override void DoAttack()
 		{
-			Quaternion rot = Quaternion.FromToRotation(Vector3.forward, hit.normal);
-			Transform bulletHole = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.00001f, rot);
-			bulletHole.parent = hit.transform;
+			DoDamage();
 
-			Rigidbody rb = hit.transform.GetComponent<Rigidbody>();
-			if (rb)
-			{
-				rb.AddForceAtPosition(direction * Speed, hit.point);
-			}
+			DoBulletHole();
+			Interaction();
 
 			Destroy(gameObject);
 		}
@@ -34,6 +29,31 @@ namespace Bullets
 		{
 			this.hit = hit;
 			this.direction = direction;
+		}
+
+		private void DoDamage()
+		{
+			Health hp = hit.transform.GetComponent<Health>();
+			if (hp)
+			{
+				hp.TakeDamage(Damage);
+			}
+		}
+
+		private void DoBulletHole()
+		{
+			Quaternion rot = Quaternion.FromToRotation(Vector3.forward, hit.normal);
+			Transform bulletHole = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.00001f, rot);
+			bulletHole.parent = hit.transform;
+		}
+
+		private void Interaction()
+		{
+			Rigidbody rb = hit.transform.GetComponent<Rigidbody>();
+			if (rb)
+			{
+				rb.AddForceAtPosition(direction * Speed, hit.point);
+			}
 		}
 	}
 }
