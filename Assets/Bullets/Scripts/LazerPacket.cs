@@ -12,9 +12,9 @@ namespace Bullets
 		public override float Mass { get { return 0.1f; } }
 		public override float Speed { get { return 50; } }
 
-		private void OnTriggerEnter(Collider _other)
+		private void OnTriggerEnter(Collider other)
 		{
-			other = _other;
+			this.other = other;
 			DoAttack();
 		}
 

@@ -6,15 +6,15 @@ namespace Bullets
 {
 	public class KernelPacket : AbstractPacket
 	{
-		Collider other;
+		Collision collision;
 
 		public override float Damage { get { return 20; } }
 		public override float Mass { get { return 5; } }
 		public override float Speed { get { return 100; } }
 
-		private void OnTriggerEnter(Collider _other)
+		private void OnCollisionEnter(Collision collision)
 		{
-			other = _other;
+			this.collision = collision;
 			DoAttack();
 		}
 
@@ -25,7 +25,7 @@ namespace Bullets
 
 		private void DoDamage()
 		{
-			Health hp = other.gameObject.GetComponent<Health>();
+			Health hp = collision.gameObject.GetComponent<Health>();
 			if(hp)
 			{
 				hp.TakeDamage(Damage);

@@ -10,11 +10,11 @@ namespace Bullets
 
 		public override float Damage { get { return 10; } }
 		public override float Mass { get { return 0.1f; } }
-		public override float Speed { get { return 50; } }
+		public override float Speed { get { return 30; } }
 
-		private void OnTriggerEnter(Collider _other)
+		private void OnTriggerEnter(Collider other)
 		{
-			other = _other;
+			this.other = other;
 			DoAttack();
 		}
 
