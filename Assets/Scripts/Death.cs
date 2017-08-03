@@ -26,12 +26,12 @@ public class Death : MonoBehaviour
 
 	IEnumerator Fade()
 	{
-		for (float alpha = 1f; alpha >= 0; alpha -= 0.1f)
+		for (float alpha = 1f; alpha >= 0; alpha -= 0.05f)
 		{
 			Color color = GetComponent<Renderer>().material.color;
 			color.a = alpha;
 			GetComponent<Renderer>().material.color = color;
-			yield return new WaitForSeconds(0.1f);
+			yield return null;
 		}
 		Destroy(gameObject);
 		yield return null;
