@@ -17,19 +17,6 @@ public class Health : MonoBehaviour
 	public float MinHP { get { return minHP; } }
 	public float MaxHP { get { return maxHP; } }
 
-	void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Alpha1))
-		{
-			TakeDamage(10);
-		}
-
-		if (Input.GetKey(KeyCode.Alpha2))
-		{
-			TakeHeal(0.5f);
-		}
-	}
-
 	public void TakeDamage(float damage)
 	{
 		if (damage > 0)
