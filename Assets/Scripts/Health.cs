@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public delegate void Death();
+public delegate void DeathDelegate();
 
 public class Health : MonoBehaviour
 {
-	public event Death OnDeath;
+	public event DeathDelegate OnDeath;
 
 	private float currentHP = 100;
 	private float minHP = 0;
