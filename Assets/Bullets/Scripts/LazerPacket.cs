@@ -15,15 +15,25 @@ namespace Bullets
 		private void OnTriggerEnter(Collider _other)
 		{
 			other = _other;
-
 			DoAttack();
-			Destroy(gameObject);
 		}
 
 		public override void DoAttack()
 		{
 			if (other.gameObject.tag == "Enemy")
-				Destroy(other.gameObject);
+			{
+				DoDamage();
+			}
+			Destroy(gameObject);
+		}
+
+		private void DoDamage()
+		{
+			Health hp = other.gameObject.GetComponent<Health>();
+			if (hp)
+			{
+				hp.TakeDamage(Damage);
+			}
 		}
 	}
 }
