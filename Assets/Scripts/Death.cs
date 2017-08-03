@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-	private bool isDead = false;
+	protected bool isDead = false;
 
 	private void Start()
 	{
 		gameObject.GetComponent<Health>().OnDeath += OnDeath;
 	}
 
-	private void Update()
+	void Update()
 	{
 		if(isDead)
 		{
-			StartCoroutine("Fade");
+			TakeDeath();
 		}
 	}
 
-	private void OnDeath()
+	void OnDeath()
 	{
 		isDead = true;
+	}
+
+	protected virtual void TakeDeath()
+	{
+		StartCoroutine("Fade");
 	}
 
 	IEnumerator Fade()
@@ -33,6 +38,7 @@ public class Death : MonoBehaviour
 			GetComponent<Renderer>().material.color = color;
 			yield return null;
 		}
+
 		Destroy(gameObject);
 		yield return null;
 	}

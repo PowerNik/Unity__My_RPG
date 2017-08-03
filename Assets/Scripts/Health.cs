@@ -7,7 +7,7 @@ public delegate void DeathDelegate();
 
 public class Health : MonoBehaviour
 {
-	public event DeathDelegate OnDeath;
+	public event DeathDelegate OnDeath = () => { };
 
 	private float currentHP = 100;
 	private float minHP = 0;
