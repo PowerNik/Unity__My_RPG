@@ -8,7 +8,6 @@ public class PlayerInputManager : MonoBehaviour
 	[SerializeField]
 	CharacterController playerController;
 	KeyCode JumpKey = KeyCode.Space;
-	KeyCode PutABombKey = KeyCode.R;
 
 	[SerializeField]
 	CameraController cameraController;

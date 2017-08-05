@@ -6,11 +6,17 @@ namespace Bullets
 {
 	public abstract class AbstractPacket : MonoBehaviour
 	{
-		public virtual float Damage { get { return 100; } }
+		protected Packet packet;
+		protected PacketType packetType;
 
-		public virtual float Speed { get { return 10; } }
+		public float Mass { get { return packet.Mass; } }
+		public float Speed { get { return packet.Speed; } }
+		public float Damage { get { return packet.Damage; } }
 
-		public virtual float Mass { get { return 1; } }
+		protected void Start()
+		{
+			packet = GameManager.SettingManager.GetPacketSettings(packetType);
+		}
 
 		public abstract void DoAttack();
 

@@ -8,15 +8,6 @@ namespace Bullets
 	{
 		Collider other;
 
-		public override float Damage { get { return 10; } }
-		public override float Mass { get { return 0.1f; } }
-		public override float Speed { get { return 50; } }
-
-		private void Start()
-		{
-			Destroy(gameObject, 3);
-		}
-
 		private void OnTriggerEnter(Collider other)
 		{
 			this.other = other;

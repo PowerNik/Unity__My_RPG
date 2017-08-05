@@ -6,14 +6,8 @@ namespace Bullets
 {
 	public class InstantaneousPacket : AbstractPacket
 	{
-		public Transform bulletHolePrefab;
-
 		private RaycastHit hit;
 		private Vector3 direction;
-
-		public override float Damage { get { return 10; } }
-		public override float Mass { get { return 0.1f; } }
-		public override float Speed { get { return 50; } }
 
 		public override void DoAttack()
 		{
@@ -43,7 +37,9 @@ namespace Bullets
 		private void DoBulletHole()
 		{
 			Quaternion rot = Quaternion.FromToRotation(Vector3.forward, hit.normal);
-			Transform bulletHole = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.00001f, rot);
+			Vector3 pos = hit.point + hit.normal * 0.00001f;
+
+			Transform bulletHole = Instantiate(packet.Prefab.transform, pos, rot);
 			bulletHole.parent = hit.transform;
 		}
 

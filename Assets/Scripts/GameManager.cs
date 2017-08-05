@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+	[SerializeField] private static SettingManager settingManager;
+	public static SettingManager SettingManager { get{ return settingManager;} }
+
 	private static Dictionary<CharacterType, List<GameObject>> CharacterDict = new Dictionary<CharacterType, List<GameObject>>();
+
 
 	public static void CharacterStart(CharacterType type, GameObject myGameObject)
 	{
