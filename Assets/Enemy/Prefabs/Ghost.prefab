@@ -90,6 +90,9 @@ GameObject:
   - component: {fileID: 23923723082793460}
   - component: {fileID: 114563642356003042}
   - component: {fileID: 114494942293023216}
+  - component: {fileID: 114825817956619624}
+  - component: {fileID: 114524436115903358}
+  - component: {fileID: 54653092067490032}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Enemy
@@ -117,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1077373049255002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 0.5, z: 2}
   m_Children: []
   m_Father: {fileID: 4625447440743068}
@@ -130,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1648363750100150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.58029, y: -0, z: 22.79277}
+  m_LocalPosition: {x: 76, y: -0, z: 60}
   m_LocalScale: {x: 1, y: 2, z: 0.5}
   m_Children:
   - {fileID: 4634391496889960}
@@ -322,6 +325,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1514902417969002}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54653092067490032
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1648363750100150}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!65 &65006872440148670
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -345,6 +363,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9253085d1b723dc4e86bd953cb139468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114524436115903358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1648363750100150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe378c7e1f9db664288a9f65ff2852bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPos: {fileID: 4526887315627968}
+  bullet: {fileID: 1002756736896598, guid: a8ea6bd308ce0254c83282fd703181a3, type: 2}
 --- !u!114 &114563642356003042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,3 +387,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c81f123dfd4c1e438ef0995bd72f7c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114825817956619624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1648363750100150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badeafa6c8f6cf242bd79e9c4d798938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCharType: 20
+  Speed: 1
+  JumpForce: 5
+  maxVelocityXZ: 10
+  AttackRadius: 25
+  AgroRadius: 50
+  VisibleRadius: 1

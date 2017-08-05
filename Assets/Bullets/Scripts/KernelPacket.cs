@@ -9,8 +9,13 @@ namespace Bullets
 		Collision collision;
 
 		public override float Damage { get { return 20; } }
-		public override float Mass { get { return 5; } }
-		public override float Speed { get { return 100; } }
+		public override float Mass { get { return 0.5f; } }
+		public override float Speed { get { return 50; } }
+
+		private void Start()
+		{
+			Destroy(gameObject, 5f);
+		}
 
 		private void OnCollisionEnter(Collision collision)
 		{

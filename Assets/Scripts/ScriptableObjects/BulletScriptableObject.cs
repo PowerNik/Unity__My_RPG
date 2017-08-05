@@ -11,7 +11,7 @@ public class BulletScriptableObject : ScriptableObject
 public class Bullet
 {
 	public string bulletName;
-	public BulletType bulletType;
+	public BulletType bulletType = BulletType.LinearLaserBullet;
 
 	public MoverType moverType = MoverType.LinearMover;
 	public PacketType packetType = PacketType.LaserPacket;

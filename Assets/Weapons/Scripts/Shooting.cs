@@ -5,31 +5,20 @@ using Bullets;
 
 public class Shooting : MonoBehaviour
 {
-	public Transform CameraPos;
-	public Transform SpawnPos;
-	RaycastHit HIT;
-	public GameObject packet;
+	public Transform spawnPos;
+	public GameObject bullet;
+	protected Vector3 direction;
 
-	void Shoot()
+	public void Shoot()
 	{
-		Vector3 startPos = SpawnPos.position;
-		Physics.Raycast(CameraPos.position, CameraPos.forward, out HIT);
+		SetDirection();
 
-		Vector3 direction = (HIT.point - startPos).normalized;
-		if (HIT.collider == null)
-		{
-			direction = CameraPos.forward;
-		}
-
-		GameObject packetGO = Instantiate(packet, startPos, this.transform.rotation);
-		packetGO.GetComponent<AbstractMover>().Move(startPos, direction);
+		GameObject bulletGO = Instantiate(bullet, spawnPos.position, this.transform.rotation);
+		bulletGO.GetComponent<AbstractMover>().Move(spawnPos.position, direction);
 	}
 
-	private void Update()
+	protected virtual void SetDirection()
 	{
-		if (Input.GetMouseButtonUp(0))
-		{
-			Shoot();
-		}
+		direction = spawnPos.forward;
 	}
 }

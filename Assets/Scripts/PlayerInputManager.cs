@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerInputManager : MonoBehaviour
 {
 	[SerializeField]
-	PlayerController playerController;
+	CharacterController playerController;
 	KeyCode JumpKey = KeyCode.Space;
 	KeyCode PutABombKey = KeyCode.R;
 
@@ -27,7 +27,6 @@ public class PlayerInputManager : MonoBehaviour
 
 	private void Update()
 	{
-		PutABomb();
 		JumpPlayer();
 	}
 
@@ -88,14 +87,6 @@ public class PlayerInputManager : MonoBehaviour
 		if (Input.GetKeyDown(JumpKey))
 		{
 			playerController.Jumping();
-		}
-	}
-
-	void PutABomb()
-	{
-		if (Input.GetKeyDown(PutABombKey))
-		{
-			playerController.PutABomb();
 		}
 	}
 

@@ -16,4 +16,12 @@ public class Packet
 	public float damage = 10;
 	public float speed = 50;
 	public float mass = 0.01f;
+	public float lifeTime = 2f;
+
+	[Tooltip("Исчезает сразу после нанесения урона?")]
+	public bool isDisappearAfterDamaging = true;
+	[Tooltip("Может быть разрушена другими снарядами?")]
+	public bool isDestroyable = false;
+	[Tooltip("Урон, необходимый для уничтожения этого снаряда")]
+	public float hardness = 0;
 }
