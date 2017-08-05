@@ -7,7 +7,7 @@ public class SettingManager : MonoBehaviour
 	[SerializeField] private PacketScriptableObject packetSettings;
 	[SerializeField] private BulletScriptableObject bulletSettings;
 	[SerializeField] private WeaponScriptableObject weaponSettings;
-//	[SerializeField] private MonsterScriptableObject monsterSettings;
+	[SerializeField] private MonsterScriptableObject monsterSettings;
 
 	public Packet GetPacketSettings(PacketType type)
 	{
@@ -24,8 +24,8 @@ public class SettingManager : MonoBehaviour
 		return weaponSettings.GetWeaponSettings(type);
 	}
 
-	/*public Monster GetMonsterSettings(MonsterType type)
+	public Monster GetMonsterSettings(MonsterType type)
 	{
 		return monsterSettings.GetMonsterSettings(type);
-	}*/
+	}
 }

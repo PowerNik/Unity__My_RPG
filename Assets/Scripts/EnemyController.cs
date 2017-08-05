@@ -8,19 +8,12 @@ public class EnemyController : CharacterController
 	GameObject target;
 	float lastTimeAttack;
 	float attackSpeed = 1;
-
-	[SerializeField]
-	private float AttackRadius = 10;
-
-	[SerializeField]
-	private float AgroRadius = 30;
-
-	[SerializeField]
-	private float VisibleRadius = 1;
+	MonsterType type = MonsterType.Zombie;
 
 	protected override void IAmStart()
 	{
 		GameManager.CharacterStart(myCharType, gameObject);
+		GameManager.SettingManager.GetMonsterSettings(type);
 	}
 
 	void Update()
@@ -38,12 +31,12 @@ public class EnemyController : CharacterController
 		}
 
 		Vector3 offset = enemy.transform.position - transform.position;
-
-		if (offset.magnitude < AgroRadius)
+		//TODO
+		/*if (offset.magnitude < AgroRadius)
 		{
 			target = enemy;
 			ArgoTriggered();
-		}
+		}*/
 	}
 
 	protected override void Diyng()
@@ -57,15 +50,15 @@ public class EnemyController : CharacterController
 		Vector3 offset = target.transform.position - transform.position;
 
 		Rotating(offset.normalized);
-
-		if (offset.magnitude > AttackRadius)
+		//TODO
+		/*if (offset.magnitude > AttackRadius)
 		{
 			Moving(offset.normalized);
 		}
 		else
 		{
 			DoAttack();
-		}
+		}*/
 	}
 
 	private void Rotating(Vector3 direction)

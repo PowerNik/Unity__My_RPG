@@ -2111,6 +2111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1829826551}
   - component: {fileID: 1829826550}
+  - component: {fileID: 1829826552}
   m_Layer: 0
   m_Name: Global Scripts
   m_TagString: Untagged
@@ -2145,6 +2146,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1829826552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1829826549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1acd74762870c84baa80a7bf4b9d200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  packetSettings: {fileID: 11400000, guid: e1f532881789e5141866e4031ea0a1e1, type: 2}
+  bulletSettings: {fileID: 11400000, guid: 93af5bbc33764bf4da4b4475a5f53329, type: 2}
+  weaponSettings: {fileID: 11400000, guid: 900b3e46af7b480428748cec167b851e, type: 2}
 --- !u!1 &1851903086
 GameObject:
   m_ObjectHideFlags: 0

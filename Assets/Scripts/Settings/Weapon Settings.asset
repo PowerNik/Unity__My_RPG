@@ -11,54 +11,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668a0616099a4f14198c0680d2236556, type: 3}
   m_Name: Weapon Settings
   m_EditorClassIdentifier: 
-  Weapons:
+  weapons:
   - weaponName: Minigun
-    type: 10
-    prefab: {fileID: 0}
     icon: {fileID: 0}
+    prefab: {fileID: 0}
+    weaponType: 0
     bulletType: 0
-    isAutomatic: 1
-    isCollimator: 0
-    Capacity: 1000
-    coolDown: 0.01
-    dispersionAngle: 10
-  - weaponName: Laser Gun
-    type: 11
-    prefab: {fileID: 0}
-    icon: {fileID: 0}
-    bulletType: 10
-    isAutomatic: 1
-    isCollimator: 0
-    Capacity: 500
+    capacity: 500
     coolDown: 0.1
-    dispersionAngle: 10
-  - weaponName: Rocket Launcher
-    type: 12
-    prefab: {fileID: 0}
+    dispersionAngle: 15
+    isAutomatic: 1
+    isCollimator: 0
+  - weaponName: Laser Gun
     icon: {fileID: 0}
+    prefab: {fileID: 0}
+    weaponType: 10
     bulletType: 10
+    capacity: 500
+    coolDown: 0.5
+    dispersionAngle: 10
+    isAutomatic: 1
+    isCollimator: 0
+  - weaponName: Rocket Launcher
+    icon: {fileID: 0}
+    prefab: {fileID: 0}
+    weaponType: 11
+    bulletType: 30
+    capacity: 100
+    coolDown: 3
+    dispersionAngle: 5
     isAutomatic: 0
     isCollimator: 1
-    Capacity: 100
-    coolDown: 2
-    dispersionAngle: 5
-  - weaponName: My Gun
-    type: 20
-    prefab: {fileID: 0}
+  - weaponName: Shotgun
     icon: {fileID: 0}
+    prefab: {fileID: 0}
+    weaponType: 20
     bulletType: 20
+    capacity: 300
+    coolDown: 1
+    dispersionAngle: 30
     isAutomatic: 1
     isCollimator: 0
-    Capacity: 100
-    coolDown: 1
-    dispersionAngle: 45
   - weaponName: Cannon
-    type: 30
-    prefab: {fileID: 0}
     icon: {fileID: 0}
+    prefab: {fileID: 0}
+    weaponType: 30
     bulletType: 30
-    isAutomatic: 0
-    isCollimator: 0
-    Capacity: 50
+    capacity: 100
     coolDown: 5
     dispersionAngle: 5
+    isAutomatic: 0
+    isCollimator: 0

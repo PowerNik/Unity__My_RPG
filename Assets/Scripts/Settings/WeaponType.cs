@@ -1,10 +1,9 @@
 ﻿public enum WeaponType
 {
-	Mace = 0,
+	Minigun = 0,
 
-	Minigun = 10,
-	LaserGun = 11,
-	RocketLauncher = 12,
+	LaserGun = 10,
+	RocketLauncher = 11,
 
 	Shotgun = 20,
 

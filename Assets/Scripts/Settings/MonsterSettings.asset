@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782108234b1d10a4db7bced66dda718a, type: 3}
+  m_Name: MonsterSettings
+  m_EditorClassIdentifier: 
+  monsters:
+  - monsterType: 0
+    prefab: {fileID: 0}
+    health: 100
+    speed: 10
+    damage: 20
+    agroRadius: 50
+    attackRadius: 20
+    visibleRadius: 1
+    mass: 0.5
+    isFly: 0
+  - monsterType: 10
+    prefab: {fileID: 0}
+    health: 200
+    speed: 5
+    damage: 10
+    agroRadius: 30
+    attackRadius: 10
+    visibleRadius: 1
+    mass: 2
+    isFly: 0
+  - monsterType: 20
+    prefab: {fileID: 0}
+    health: 50
+    speed: 15
+    damage: 20
+    agroRadius: 500
+    attackRadius: 50
+    visibleRadius: 1
+    mass: 1
+    isFly: 1

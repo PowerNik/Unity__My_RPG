@@ -12,48 +12,53 @@ MonoBehaviour:
   m_Name: Packet Settings
   m_EditorClassIdentifier: 
   packets:
-  - type: 0
+  - packetType: 0
     prefab: {fileID: 0}
     damage: 10
     speed: 100
     mass: 0.01
-    lifeTime: 2
-    isDisappearAfterDamaging: 1
+    lifeTime: 1
+    isDisappearAfterCollision: 1
+    isDestroyAfterDamaging: 1
     isDestroyable: 0
     hardness: 0
-  - type: 10
+  - packetType: 10
     prefab: {fileID: 0}
     damage: 20
     speed: 50
     mass: 0.001
     lifeTime: 2
-    isDisappearAfterDamaging: 1
+    isDisappearAfterCollision: 1
+    isDestroyAfterDamaging: 1
     isDestroyable: 0
     hardness: 0
-  - type: 11
+  - packetType: 11
     prefab: {fileID: 0}
     damage: 30
     speed: 30
     mass: 0.1
     lifeTime: 5
-    isDisappearAfterDamaging: 1
+    isDisappearAfterCollision: 1
+    isDestroyAfterDamaging: 1
     isDestroyable: 1
     hardness: 100
-  - type: 20
+  - packetType: 20
     prefab: {fileID: 0}
     damage: 5
     speed: 50
     mass: 0.01
     lifeTime: 1
-    isDisappearAfterDamaging: 1
+    isDisappearAfterCollision: 1
+    isDestroyAfterDamaging: 1
     isDestroyable: 0
     hardness: 0
-  - type: 30
+  - packetType: 30
     prefab: {fileID: 0}
     damage: 25
-    speed: 25
+    speed: 30
     mass: 0.1
-    lifeTime: 3
-    isDisappearAfterDamaging: 0
+    lifeTime: 5
+    isDisappearAfterCollision: 0
+    isDestroyAfterDamaging: 1
     isDestroyable: 1
     hardness: 100
