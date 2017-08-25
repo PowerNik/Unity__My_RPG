@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d1acd74762870c84baa80a7bf4b9d200
+timeCreated: 1502882630
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - packetSettings: {fileID: 11400000, guid: e1f532881789e5141866e4031ea0a1e1, type: 2}
+  - bulletSettings: {fileID: 11400000, guid: 93af5bbc33764bf4da4b4475a5f53329, type: 2}
+  - weaponSettings: {fileID: 11400000, guid: 900b3e46af7b480428748cec167b851e, type: 2}
+  - monsterSettings: {fileID: 11400000, guid: cc2d6a945fcbbb847be3969ce42089fd, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   packets:
   - packetType: 0
-    prefab: {fileID: 0}
+    prefab: {fileID: 1883462141496724, guid: 718960a7553daa34e8a6f85b4871444a, type: 2}
     damage: 10
     speed: 100
     mass: 0.01
@@ -23,7 +23,7 @@ MonoBehaviour:
     isDestroyable: 0
     hardness: 0
   - packetType: 10
-    prefab: {fileID: 0}
+    prefab: {fileID: 1002756736896598, guid: a8ea6bd308ce0254c83282fd703181a3, type: 2}
     damage: 20
     speed: 50
     mass: 0.001
@@ -33,7 +33,7 @@ MonoBehaviour:
     isDestroyable: 0
     hardness: 0
   - packetType: 11
-    prefab: {fileID: 0}
+    prefab: {fileID: 1434991978597502, guid: 4fa14674c9839734482c85ba79453be5, type: 2}
     damage: 30
     speed: 30
     mass: 0.1
@@ -43,7 +43,7 @@ MonoBehaviour:
     isDestroyable: 1
     hardness: 100
   - packetType: 20
-    prefab: {fileID: 0}
+    prefab: {fileID: 1618981304603400, guid: a64fb6316a7e37f43a008b88bd44f8e2, type: 2}
     damage: 5
     speed: 50
     mass: 0.01
@@ -53,7 +53,7 @@ MonoBehaviour:
     isDestroyable: 0
     hardness: 0
   - packetType: 30
-    prefab: {fileID: 0}
+    prefab: {fileID: 1912204764065892, guid: 5d63298307fa5e94787672146f1dd831, type: 2}
     damage: 25
     speed: 30
     mass: 0.1

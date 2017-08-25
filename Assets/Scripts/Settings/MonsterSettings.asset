@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsters:
   - monsterType: 0
-    prefab: {fileID: 0}
+    prefab: {fileID: 1648363750100150, guid: c27203db0e3afa94ab703209b2d69448, type: 2}
     health: 100
     speed: 10
     damage: 20
@@ -23,7 +23,7 @@ MonoBehaviour:
     mass: 0.5
     isFly: 0
   - monsterType: 10
-    prefab: {fileID: 0}
+    prefab: {fileID: 1648363750100150, guid: be6ac8b348069d94ba3110d87cd6339f, type: 2}
     health: 200
     speed: 5
     damage: 10
@@ -33,7 +33,7 @@ MonoBehaviour:
     mass: 2
     isFly: 0
   - monsterType: 20
-    prefab: {fileID: 0}
+    prefab: {fileID: 1466150330138802, guid: b4791ff77c22b904aab4821ee637f0bc, type: 2}
     health: 50
     speed: 15
     damage: 20

@@ -14,7 +14,7 @@ MonoBehaviour:
   weapons:
   - weaponName: Minigun
     icon: {fileID: 0}
-    prefab: {fileID: 0}
+    prefab: {fileID: 1434991978597502, guid: 4fa14674c9839734482c85ba79453be5, type: 2}
     weaponType: 0
     bulletType: 0
     capacity: 500
@@ -24,7 +24,7 @@ MonoBehaviour:
     isCollimator: 0
   - weaponName: Laser Gun
     icon: {fileID: 0}
-    prefab: {fileID: 0}
+    prefab: {fileID: 1434991978597502, guid: 4fa14674c9839734482c85ba79453be5, type: 2}
     weaponType: 10
     bulletType: 10
     capacity: 500
@@ -34,7 +34,7 @@ MonoBehaviour:
     isCollimator: 0
   - weaponName: Rocket Launcher
     icon: {fileID: 0}
-    prefab: {fileID: 0}
+    prefab: {fileID: 1434991978597502, guid: 4fa14674c9839734482c85ba79453be5, type: 2}
     weaponType: 11
     bulletType: 30
     capacity: 100
@@ -44,7 +44,7 @@ MonoBehaviour:
     isCollimator: 1
   - weaponName: Shotgun
     icon: {fileID: 0}
-    prefab: {fileID: 0}
+    prefab: {fileID: 1434991978597502, guid: 4fa14674c9839734482c85ba79453be5, type: 2}
     weaponType: 20
     bulletType: 20
     capacity: 300
@@ -54,7 +54,7 @@ MonoBehaviour:
     isCollimator: 0
   - weaponName: Cannon
     icon: {fileID: 0}
-    prefab: {fileID: 0}
+    prefab: {fileID: 1975748541740414, guid: d826e4006dfbbe24291cac4644d24786, type: 2}
     weaponType: 30
     bulletType: 30
     capacity: 100

@@ -5,7 +5,17 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 	[SerializeField] private static SettingManager settingManager;
-	public static SettingManager SettingManager { get{ return settingManager;} }
+	public static SettingManager SettingManager
+	{
+		get
+		{
+			if(settingManager == null)
+			{
+				settingManager = GameObject.Find("Global Scripts").GetComponent<SettingManager>();
+			}
+			return settingManager;
+		}
+	}
 
 	private static Dictionary<CharacterType, List<GameObject>> CharacterDict = new Dictionary<CharacterType, List<GameObject>>();
 
