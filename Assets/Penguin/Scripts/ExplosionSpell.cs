@@ -8,6 +8,7 @@ public class ExplosionSpell : MonoBehaviour
 	public float radius = 10f;
 	public float upForce = 3f;
 
+	public GameObject bomb;
 
 	void FixedUpdate()
 	{
@@ -20,6 +21,12 @@ public class ExplosionSpell : MonoBehaviour
 		{
 			MakeAnAttraction();
 		}
+	}
+
+	private void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.B))
+		Instantiate(bomb, transform.position + transform.forward * 2, Quaternion.identity);
 	}
 
 	void MakeAnExplosion()

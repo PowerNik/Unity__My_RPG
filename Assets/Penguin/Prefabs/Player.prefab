@@ -608,6 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPos: {fileID: 4754216420149600}
   bullet: {fileID: 1883462141496724, guid: 718960a7553daa34e8a6f85b4871444a, type: 2}
+  player: {fileID: 0}
   cameraPos: {fileID: 0}
 --- !u!114 &114813055990536234
 MonoBehaviour:

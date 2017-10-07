@@ -63,5 +63,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d6b544ac4fcd14e85d61a0a917f533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHolePrefab: {fileID: 4638321312148052, guid: 52edf7f35eb85be48b6f964903f41a06,
-    type: 2}
+  prefab: {fileID: 1919684481349422, guid: 52edf7f35eb85be48b6f964903f41a06, type: 2}

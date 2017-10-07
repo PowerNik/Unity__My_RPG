@@ -9,9 +9,9 @@ namespace Bullets
 		protected Packet packet;
 		protected PacketType packetType;
 
-		public float Mass { get { return packet.Mass; } }
-		public float Speed { get { return packet.Speed; } }
-		public float Damage { get { return packet.Damage; } }
+		public float Mass { get { return 5; /*packet.Mass;*/ } }
+		public float Speed { get { return 5; /*packet.Speed;*/ } }
+		public float Damage { get { return 5; /*packet.Damage;*/ } }
 
 		protected void Start()
 		{

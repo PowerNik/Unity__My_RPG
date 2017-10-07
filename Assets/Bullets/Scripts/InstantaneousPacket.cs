@@ -6,6 +6,7 @@ namespace Bullets
 {
 	public class InstantaneousPacket : AbstractPacket
 	{
+		public GameObject prefab;
 		private RaycastHit hit;
 		private Vector3 direction;
 
@@ -39,7 +40,7 @@ namespace Bullets
 			Quaternion rot = Quaternion.FromToRotation(Vector3.forward, hit.normal);
 			Vector3 pos = hit.point + hit.normal * 0.00001f;
 
-			Transform bulletHole = Instantiate(packet.Prefab.transform, pos, rot);
+			Transform bulletHole = Instantiate(prefab.transform, pos, rot);
 			bulletHole.parent = hit.transform;
 		}
 

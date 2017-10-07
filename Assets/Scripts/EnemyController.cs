@@ -32,11 +32,11 @@ public class EnemyController : CharacterController
 
 		Vector3 offset = enemy.transform.position - transform.position;
 		//TODO
-		/*if (offset.magnitude < AgroRadius)
+		if (offset.magnitude < 20)
 		{
 			target = enemy;
 			ArgoTriggered();
-		}*/
+		}
 	}
 
 	protected override void Diyng()
@@ -51,21 +51,21 @@ public class EnemyController : CharacterController
 
 		Rotating(offset.normalized);
 		//TODO
-		/*if (offset.magnitude > AttackRadius)
+		if (offset.magnitude > 10)
 		{
 			Moving(offset.normalized);
 		}
 		else
 		{
 			DoAttack();
-		}*/
+		}
 	}
 
 	private void Rotating(Vector3 direction)
 	{
-		Quaternion rot = Quaternion.FromToRotation(Vector3.forward, direction);
+		/*Quaternion rot = Quaternion.FromToRotation(Vector3.forward, direction);
 		rot.x = rot.z = 0;
-		transform.rotation = rot;
+		transform.rotation = rot;*/
 	}
 
 	public override void DoAttack()
